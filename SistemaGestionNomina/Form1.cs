@@ -7,7 +7,7 @@ namespace SistemaGestionNomina
             InitializeComponent();
             DTG.Columns.Add("Nombre", "Nombre");  //  Para agregar columna de Nombre del arreglo empleados
             DTG.Columns.Add("Puesto", "Puesto");  //  Para agregar columna de Puesto del arreglo puestos
-            DTG.Columns.Add("Salario", "Salario");  //  Para agregar columna de Salario del arreglo salarios
+            DTG.Columns.Add("Salario", "Salario");  //  Para agregar columna de Salario del arreglo salarios--
         }
 
 
