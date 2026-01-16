@@ -37,20 +37,28 @@
             btnBuscarEmpleados = new Button();
             DTG = new DataGridView();
             Pago = new TabPage();
+            button3 = new Button();
+            comboBox5 = new ComboBox();
+            lblEmpleado6 = new Label();
+            comboBox6 = new ComboBox();
+            lblEmpleado5 = new Label();
+            label23 = new Label();
+            btnCalculadora = new Button();
             monthCalendar1 = new MonthCalendar();
             btnOk = new Button();
             comboBox4 = new ComboBox();
-            label8 = new Label();
+            lblEmpleado4 = new Label();
             label7 = new Label();
             label6 = new Label();
             comboBox3 = new ComboBox();
             comboBox2 = new ComboBox();
             comboBox1 = new ComboBox();
-            label5 = new Label();
-            label4 = new Label();
-            label2 = new Label();
+            lblEmpleado = new Label();
+            lblEmpleado3 = new Label();
+            lblEmpleado1 = new Label();
             button1 = new Button();
             Reportes = new TabPage();
+            label26 = new Label();
             label22 = new Label();
             label21 = new Label();
             label20 = new Label();
@@ -100,7 +108,6 @@
             Empleados.TabIndex = 1;
             Empleados.Text = "Empleados";
             Empleados.UseVisualStyleBackColor = true;
-            Empleados.Click += Empleados_Click;
             // 
             // label3
             // 
@@ -125,6 +132,7 @@
             btnSeleccionarEmpleados.TabIndex = 3;
             btnSeleccionarEmpleados.Text = "Seleccionar";
             btnSeleccionarEmpleados.UseVisualStyleBackColor = true;
+            btnSeleccionarEmpleados.Click += btnSeleccionarEmpleados_Click;
             // 
             // btnLimpiarEmpleados
             // 
@@ -164,18 +172,25 @@
             // 
             // Pago
             // 
+            Pago.Controls.Add(button3);
+            Pago.Controls.Add(comboBox5);
+            Pago.Controls.Add(lblEmpleado6);
+            Pago.Controls.Add(comboBox6);
+            Pago.Controls.Add(lblEmpleado5);
+            Pago.Controls.Add(label23);
+            Pago.Controls.Add(btnCalculadora);
             Pago.Controls.Add(monthCalendar1);
             Pago.Controls.Add(btnOk);
             Pago.Controls.Add(comboBox4);
-            Pago.Controls.Add(label8);
+            Pago.Controls.Add(lblEmpleado4);
             Pago.Controls.Add(label7);
             Pago.Controls.Add(label6);
             Pago.Controls.Add(comboBox3);
             Pago.Controls.Add(comboBox2);
             Pago.Controls.Add(comboBox1);
-            Pago.Controls.Add(label5);
-            Pago.Controls.Add(label4);
-            Pago.Controls.Add(label2);
+            Pago.Controls.Add(lblEmpleado);
+            Pago.Controls.Add(lblEmpleado3);
+            Pago.Controls.Add(lblEmpleado1);
             Pago.Controls.Add(button1);
             Pago.Location = new Point(4, 24);
             Pago.Name = "Pago";
@@ -183,6 +198,72 @@
             Pago.TabIndex = 2;
             Pago.Text = "Pagos";
             Pago.UseVisualStyleBackColor = true;
+            // 
+            // button3
+            // 
+            button3.BackgroundImage = Properties.Resources.Moneda;
+            button3.BackgroundImageLayout = ImageLayout.Stretch;
+            button3.Location = new Point(839, 265);
+            button3.Name = "button3";
+            button3.Size = new Size(227, 109);
+            button3.TabIndex = 16;
+            button3.UseVisualStyleBackColor = true;
+            // 
+            // comboBox5
+            // 
+            comboBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox5.FormattingEnabled = true;
+            comboBox5.Location = new Point(614, 341);
+            comboBox5.Name = "comboBox5";
+            comboBox5.Size = new Size(213, 33);
+            comboBox5.TabIndex = 15;
+            // 
+            // lblEmpleado6
+            // 
+            lblEmpleado6.BackColor = Color.LightGray;
+            lblEmpleado6.Location = new Point(350, 341);
+            lblEmpleado6.Name = "lblEmpleado6";
+            lblEmpleado6.Size = new Size(258, 38);
+            lblEmpleado6.TabIndex = 14;
+            // 
+            // comboBox6
+            // 
+            comboBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            comboBox6.FormattingEnabled = true;
+            comboBox6.Location = new Point(614, 294);
+            comboBox6.Name = "comboBox6";
+            comboBox6.Size = new Size(213, 33);
+            comboBox6.TabIndex = 13;
+            // 
+            // lblEmpleado5
+            // 
+            lblEmpleado5.BackColor = Color.LightGray;
+            lblEmpleado5.Location = new Point(350, 294);
+            lblEmpleado5.Name = "lblEmpleado5";
+            lblEmpleado5.Size = new Size(258, 38);
+            lblEmpleado5.TabIndex = 12;
+            // 
+            // label23
+            // 
+            label23.BackColor = SystemColors.ActiveCaption;
+            label23.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label23.ForeColor = SystemColors.ControlLightLight;
+            label23.Location = new Point(907, 199);
+            label23.Name = "label23";
+            label23.Size = new Size(87, 60);
+            label23.TabIndex = 5;
+            label23.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // btnCalculadora
+            // 
+            btnCalculadora.BackgroundImage = Properties.Resources.estesi;
+            btnCalculadora.BackgroundImageLayout = ImageLayout.Stretch;
+            btnCalculadora.Location = new Point(992, 199);
+            btnCalculadora.Name = "btnCalculadora";
+            btnCalculadora.Size = new Size(74, 60);
+            btnCalculadora.TabIndex = 11;
+            btnCalculadora.UseVisualStyleBackColor = true;
+            btnCalculadora.Click += btnCalculadora_Click;
             // 
             // monthCalendar1
             // 
@@ -194,9 +275,9 @@
             // 
             btnOk.BackgroundImage = (Image)resources.GetObject("btnOk.BackgroundImage");
             btnOk.BackgroundImageLayout = ImageLayout.Stretch;
-            btnOk.Location = new Point(913, 199);
+            btnOk.Location = new Point(839, 199);
             btnOk.Name = "btnOk";
-            btnOk.Size = new Size(78, 60);
+            btnOk.Size = new Size(69, 60);
             btnOk.TabIndex = 5;
             btnOk.UseVisualStyleBackColor = true;
             btnOk.Click += btnOk_Click;
@@ -205,19 +286,18 @@
             // 
             comboBox4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(614, 341);
+            comboBox4.Location = new Point(614, 246);
             comboBox4.Name = "comboBox4";
             comboBox4.Size = new Size(213, 33);
             comboBox4.TabIndex = 9;
             // 
-            // label8
+            // lblEmpleado4
             // 
-            label8.BackColor = Color.LightGray;
-            label8.Location = new Point(350, 341);
-            label8.Name = "label8";
-            label8.Size = new Size(258, 38);
-            label8.TabIndex = 8;
-            label8.Text = "label8";
+            lblEmpleado4.BackColor = Color.LightGray;
+            lblEmpleado4.Location = new Point(350, 246);
+            lblEmpleado4.Name = "lblEmpleado4";
+            lblEmpleado4.Size = new Size(258, 38);
+            lblEmpleado4.TabIndex = 8;
             // 
             // label7
             // 
@@ -247,7 +327,7 @@
             // 
             comboBox3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(614, 271);
+            comboBox3.Location = new Point(614, 199);
             comboBox3.Name = "comboBox3";
             comboBox3.Size = new Size(213, 33);
             comboBox3.TabIndex = 6;
@@ -256,7 +336,7 @@
             // 
             comboBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(614, 182);
+            comboBox2.Location = new Point(614, 154);
             comboBox2.Name = "comboBox2";
             comboBox2.Size = new Size(213, 33);
             comboBox2.TabIndex = 5;
@@ -270,32 +350,30 @@
             comboBox1.Size = new Size(213, 33);
             comboBox1.TabIndex = 4;
             // 
-            // label5
+            // lblEmpleado
             // 
-            label5.BackColor = Color.LightGray;
-            label5.Location = new Point(350, 177);
-            label5.Name = "label5";
-            label5.Size = new Size(258, 38);
-            label5.TabIndex = 3;
-            label5.Text = "label5";
+            lblEmpleado.BackColor = Color.LightGray;
+            lblEmpleado.Location = new Point(350, 149);
+            lblEmpleado.Name = "lblEmpleado";
+            lblEmpleado.Size = new Size(258, 38);
+            lblEmpleado.TabIndex = 3;
             // 
-            // label4
+            // lblEmpleado3
             // 
-            label4.BackColor = Color.LightGray;
-            label4.Location = new Point(350, 271);
-            label4.Name = "label4";
-            label4.Size = new Size(258, 38);
-            label4.TabIndex = 2;
-            label4.Text = "label4";
+            lblEmpleado3.BackColor = Color.LightGray;
+            lblEmpleado3.Location = new Point(350, 199);
+            lblEmpleado3.Name = "lblEmpleado3";
+            lblEmpleado3.Size = new Size(258, 38);
+            lblEmpleado3.TabIndex = 2;
             // 
-            // label2
+            // lblEmpleado1
             // 
-            label2.BackColor = Color.LightGray;
-            label2.Location = new Point(350, 95);
-            label2.Name = "label2";
-            label2.Size = new Size(258, 38);
-            label2.TabIndex = 1;
-            label2.Text = "label2";
+            lblEmpleado1.BackColor = Color.LightGray;
+            lblEmpleado1.Location = new Point(350, 95);
+            lblEmpleado1.Name = "lblEmpleado1";
+            lblEmpleado1.Size = new Size(258, 38);
+            lblEmpleado1.TabIndex = 1;
+            lblEmpleado1.Click += lblEmpleado1_Click;
             // 
             // button1
             // 
@@ -309,6 +387,7 @@
             // 
             // Reportes
             // 
+            Reportes.Controls.Add(label26);
             Reportes.Controls.Add(label22);
             Reportes.Controls.Add(label21);
             Reportes.Controls.Add(label20);
@@ -329,6 +408,17 @@
             Reportes.TabIndex = 3;
             Reportes.Text = "Reportes";
             Reportes.UseVisualStyleBackColor = true;
+            // 
+            // label26
+            // 
+            label26.BackColor = SystemColors.ActiveCaption;
+            label26.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label26.ForeColor = SystemColors.ControlLightLight;
+            label26.Location = new Point(884, 0);
+            label26.Name = "label26";
+            label26.Size = new Size(205, 315);
+            label26.TabIndex = 18;
+            label26.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label22
             // 
@@ -546,16 +636,16 @@
         private TabPage tabPage3;
         private Button btbExitEmpleados;
         private Button button1;
-        private Label label2;
-        private Label label5;
-        private Label label4;
+        private Label lblEmpleado1;
+        private Label lblEmpleado;
+        private Label lblEmpleado3;
         private ComboBox comboBox3;
         private ComboBox comboBox2;
         private ComboBox comboBox1;
         private Label label7;
         private Label label6;
         private ComboBox comboBox4;
-        private Label label8;
+        private Label lblEmpleado4;
         private Button btnOk;
         private Label label9;
         private Label label10;
@@ -572,5 +662,13 @@
         private Label label14;
         private Label label22;
         private MonthCalendar monthCalendar1;
+        private Button btnCalculadora;
+        private Label label23;
+        private ComboBox comboBox5;
+        private Label lblEmpleado6;
+        private ComboBox comboBox6;
+        private Label lblEmpleado5;
+        private Button button3;
+        private Label label26;
     }
 }
