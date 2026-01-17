@@ -37,38 +37,38 @@
             btnBuscarEmpleados = new Button();
             DTG = new DataGridView();
             Pago = new TabPage();
+            cmb6 = new ComboBox();
+            cmb5 = new ComboBox();
+            cmb4 = new ComboBox();
+            cmb2 = new ComboBox();
+            cmb3 = new ComboBox();
+            textBox6 = new TextBox();
+            textBox5 = new TextBox();
+            textBox4 = new TextBox();
+            textBox3 = new TextBox();
+            textBox2 = new TextBox();
+            textBox1 = new TextBox();
             button3 = new Button();
-            comboBox5 = new ComboBox();
-            lblEmpleado6 = new Label();
-            comboBox6 = new ComboBox();
-            lblEmpleado5 = new Label();
             label23 = new Label();
             btnCalculadora = new Button();
             monthCalendar1 = new MonthCalendar();
             btnOk = new Button();
-            comboBox4 = new ComboBox();
-            lblEmpleado4 = new Label();
             label7 = new Label();
             label6 = new Label();
-            comboBox3 = new ComboBox();
-            comboBox2 = new ComboBox();
-            comboBox1 = new ComboBox();
-            lblEmpleado = new Label();
-            lblEmpleado3 = new Label();
-            lblEmpleado1 = new Label();
+            cmb1 = new ComboBox();
             button1 = new Button();
             Reportes = new TabPage();
             label26 = new Label();
             label22 = new Label();
-            label21 = new Label();
-            label20 = new Label();
-            label19 = new Label();
-            label18 = new Label();
-            label17 = new Label();
-            label16 = new Label();
-            label15 = new Label();
-            label14 = new Label();
-            label13 = new Label();
+            lblSalario3 = new Label();
+            lblSalario2 = new Label();
+            lblSalario1 = new Label();
+            lblTipoContrato3 = new Label();
+            lblTipoContrato2 = new Label();
+            lblTipoContrato1 = new Label();
+            lblEmpleado2 = new Label();
+            lblEmpleado3 = new Label();
+            lblEmpleado1 = new Label();
             label12 = new Label();
             label11 = new Label();
             label10 = new Label();
@@ -168,29 +168,28 @@
             DTG.Name = "DTG";
             DTG.Size = new Size(1075, 311);
             DTG.TabIndex = 0;
-            DTG.CellDoubleClick += DTG_CellDoubleClick;
             // 
             // Pago
             // 
+            Pago.Controls.Add(cmb6);
+            Pago.Controls.Add(cmb5);
+            Pago.Controls.Add(cmb4);
+            Pago.Controls.Add(cmb2);
+            Pago.Controls.Add(cmb3);
+            Pago.Controls.Add(textBox6);
+            Pago.Controls.Add(textBox5);
+            Pago.Controls.Add(textBox4);
+            Pago.Controls.Add(textBox3);
+            Pago.Controls.Add(textBox2);
+            Pago.Controls.Add(textBox1);
             Pago.Controls.Add(button3);
-            Pago.Controls.Add(comboBox5);
-            Pago.Controls.Add(lblEmpleado6);
-            Pago.Controls.Add(comboBox6);
-            Pago.Controls.Add(lblEmpleado5);
             Pago.Controls.Add(label23);
             Pago.Controls.Add(btnCalculadora);
             Pago.Controls.Add(monthCalendar1);
             Pago.Controls.Add(btnOk);
-            Pago.Controls.Add(comboBox4);
-            Pago.Controls.Add(lblEmpleado4);
             Pago.Controls.Add(label7);
             Pago.Controls.Add(label6);
-            Pago.Controls.Add(comboBox3);
-            Pago.Controls.Add(comboBox2);
-            Pago.Controls.Add(comboBox1);
-            Pago.Controls.Add(lblEmpleado);
-            Pago.Controls.Add(lblEmpleado3);
-            Pago.Controls.Add(lblEmpleado1);
+            Pago.Controls.Add(cmb1);
             Pago.Controls.Add(button1);
             Pago.Location = new Point(4, 24);
             Pago.Name = "Pago";
@@ -198,6 +197,104 @@
             Pago.TabIndex = 2;
             Pago.Text = "Pagos";
             Pago.UseVisualStyleBackColor = true;
+            // 
+            // cmb6
+            // 
+            cmb6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmb6.FormattingEnabled = true;
+            cmb6.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
+            cmb6.Location = new Point(335, 357);
+            cmb6.Name = "cmb6";
+            cmb6.Size = new Size(309, 33);
+            cmb6.TabIndex = 27;
+            // 
+            // cmb5
+            // 
+            cmb5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmb5.FormattingEnabled = true;
+            cmb5.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
+            cmb5.Location = new Point(335, 301);
+            cmb5.Name = "cmb5";
+            cmb5.Size = new Size(309, 33);
+            cmb5.TabIndex = 26;
+            // 
+            // cmb4
+            // 
+            cmb4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmb4.FormattingEnabled = true;
+            cmb4.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
+            cmb4.Location = new Point(335, 257);
+            cmb4.Name = "cmb4";
+            cmb4.Size = new Size(309, 33);
+            cmb4.TabIndex = 25;
+            // 
+            // cmb2
+            // 
+            cmb2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmb2.FormattingEnabled = true;
+            cmb2.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
+            cmb2.Location = new Point(335, 165);
+            cmb2.Name = "cmb2";
+            cmb2.Size = new Size(309, 33);
+            cmb2.TabIndex = 24;
+            // 
+            // cmb3
+            // 
+            cmb3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmb3.FormattingEnabled = true;
+            cmb3.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
+            cmb3.Location = new Point(335, 214);
+            cmb3.Name = "cmb3";
+            cmb3.Size = new Size(309, 33);
+            cmb3.TabIndex = 23;
+            // 
+            // textBox6
+            // 
+            textBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox6.Location = new Point(656, 165);
+            textBox6.Name = "textBox6";
+            textBox6.Size = new Size(160, 33);
+            textBox6.TabIndex = 22;
+            // 
+            // textBox5
+            // 
+            textBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox5.Location = new Point(656, 357);
+            textBox5.Name = "textBox5";
+            textBox5.Size = new Size(160, 33);
+            textBox5.TabIndex = 21;
+            // 
+            // textBox4
+            // 
+            textBox4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox4.Location = new Point(656, 305);
+            textBox4.Name = "textBox4";
+            textBox4.Size = new Size(160, 33);
+            textBox4.TabIndex = 20;
+            // 
+            // textBox3
+            // 
+            textBox3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox3.Location = new Point(661, 257);
+            textBox3.Name = "textBox3";
+            textBox3.Size = new Size(160, 33);
+            textBox3.TabIndex = 19;
+            // 
+            // textBox2
+            // 
+            textBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox2.Location = new Point(656, 210);
+            textBox2.Name = "textBox2";
+            textBox2.Size = new Size(160, 33);
+            textBox2.TabIndex = 18;
+            // 
+            // textBox1
+            // 
+            textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            textBox1.Location = new Point(656, 111);
+            textBox1.Name = "textBox1";
+            textBox1.Size = new Size(165, 33);
+            textBox1.TabIndex = 17;
             // 
             // button3
             // 
@@ -208,40 +305,6 @@
             button3.Size = new Size(227, 109);
             button3.TabIndex = 16;
             button3.UseVisualStyleBackColor = true;
-            // 
-            // comboBox5
-            // 
-            comboBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox5.FormattingEnabled = true;
-            comboBox5.Location = new Point(614, 341);
-            comboBox5.Name = "comboBox5";
-            comboBox5.Size = new Size(213, 33);
-            comboBox5.TabIndex = 15;
-            // 
-            // lblEmpleado6
-            // 
-            lblEmpleado6.BackColor = Color.LightGray;
-            lblEmpleado6.Location = new Point(350, 341);
-            lblEmpleado6.Name = "lblEmpleado6";
-            lblEmpleado6.Size = new Size(258, 38);
-            lblEmpleado6.TabIndex = 14;
-            // 
-            // comboBox6
-            // 
-            comboBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox6.FormattingEnabled = true;
-            comboBox6.Location = new Point(614, 294);
-            comboBox6.Name = "comboBox6";
-            comboBox6.Size = new Size(213, 33);
-            comboBox6.TabIndex = 13;
-            // 
-            // lblEmpleado5
-            // 
-            lblEmpleado5.BackColor = Color.LightGray;
-            lblEmpleado5.Location = new Point(350, 294);
-            lblEmpleado5.Name = "lblEmpleado5";
-            lblEmpleado5.Size = new Size(258, 38);
-            lblEmpleado5.TabIndex = 12;
             // 
             // label23
             // 
@@ -282,29 +345,12 @@
             btnOk.UseVisualStyleBackColor = true;
             btnOk.Click += btnOk_Click;
             // 
-            // comboBox4
-            // 
-            comboBox4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox4.FormattingEnabled = true;
-            comboBox4.Location = new Point(614, 246);
-            comboBox4.Name = "comboBox4";
-            comboBox4.Size = new Size(213, 33);
-            comboBox4.TabIndex = 9;
-            // 
-            // lblEmpleado4
-            // 
-            lblEmpleado4.BackColor = Color.LightGray;
-            lblEmpleado4.Location = new Point(350, 246);
-            lblEmpleado4.Name = "lblEmpleado4";
-            lblEmpleado4.Size = new Size(258, 38);
-            lblEmpleado4.TabIndex = 8;
-            // 
             // label7
             // 
             label7.BackColor = SystemColors.ActiveCaption;
             label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(650, 18);
+            label7.Location = new Point(661, 16);
             label7.Name = "label7";
             label7.Size = new Size(177, 57);
             label7.TabIndex = 7;
@@ -316,64 +362,22 @@
             label6.BackColor = SystemColors.ActiveCaption;
             label6.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label6.ForeColor = SystemColors.ControlLightLight;
-            label6.Location = new Point(335, 18);
+            label6.Location = new Point(335, 16);
             label6.Name = "label6";
             label6.Size = new Size(309, 57);
             label6.TabIndex = 5;
             label6.Text = "Empleados";
             label6.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // comboBox3
+            // cmb1
             // 
-            comboBox3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox3.FormattingEnabled = true;
-            comboBox3.Location = new Point(614, 199);
-            comboBox3.Name = "comboBox3";
-            comboBox3.Size = new Size(213, 33);
-            comboBox3.TabIndex = 6;
-            // 
-            // comboBox2
-            // 
-            comboBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox2.FormattingEnabled = true;
-            comboBox2.Location = new Point(614, 154);
-            comboBox2.Name = "comboBox2";
-            comboBox2.Size = new Size(213, 33);
-            comboBox2.TabIndex = 5;
-            // 
-            // comboBox1
-            // 
-            comboBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            comboBox1.FormattingEnabled = true;
-            comboBox1.Location = new Point(614, 100);
-            comboBox1.Name = "comboBox1";
-            comboBox1.Size = new Size(213, 33);
-            comboBox1.TabIndex = 4;
-            // 
-            // lblEmpleado
-            // 
-            lblEmpleado.BackColor = Color.LightGray;
-            lblEmpleado.Location = new Point(350, 149);
-            lblEmpleado.Name = "lblEmpleado";
-            lblEmpleado.Size = new Size(258, 38);
-            lblEmpleado.TabIndex = 3;
-            // 
-            // lblEmpleado3
-            // 
-            lblEmpleado3.BackColor = Color.LightGray;
-            lblEmpleado3.Location = new Point(350, 199);
-            lblEmpleado3.Name = "lblEmpleado3";
-            lblEmpleado3.Size = new Size(258, 38);
-            lblEmpleado3.TabIndex = 2;
-            // 
-            // lblEmpleado1
-            // 
-            lblEmpleado1.BackColor = Color.LightGray;
-            lblEmpleado1.Location = new Point(350, 95);
-            lblEmpleado1.Name = "lblEmpleado1";
-            lblEmpleado1.Size = new Size(258, 38);
-            lblEmpleado1.TabIndex = 1;
-            lblEmpleado1.Click += lblEmpleado1_Click;
+            cmb1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            cmb1.FormattingEnabled = true;
+            cmb1.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
+            cmb1.Location = new Point(335, 111);
+            cmb1.Name = "cmb1";
+            cmb1.Size = new Size(309, 33);
+            cmb1.TabIndex = 4;
             // 
             // button1
             // 
@@ -389,15 +393,15 @@
             // 
             Reportes.Controls.Add(label26);
             Reportes.Controls.Add(label22);
-            Reportes.Controls.Add(label21);
-            Reportes.Controls.Add(label20);
-            Reportes.Controls.Add(label19);
-            Reportes.Controls.Add(label18);
-            Reportes.Controls.Add(label17);
-            Reportes.Controls.Add(label16);
-            Reportes.Controls.Add(label15);
-            Reportes.Controls.Add(label14);
-            Reportes.Controls.Add(label13);
+            Reportes.Controls.Add(lblSalario3);
+            Reportes.Controls.Add(lblSalario2);
+            Reportes.Controls.Add(lblSalario1);
+            Reportes.Controls.Add(lblTipoContrato3);
+            Reportes.Controls.Add(lblTipoContrato2);
+            Reportes.Controls.Add(lblTipoContrato1);
+            Reportes.Controls.Add(lblEmpleado2);
+            Reportes.Controls.Add(lblEmpleado3);
+            Reportes.Controls.Add(lblEmpleado1);
             Reportes.Controls.Add(label12);
             Reportes.Controls.Add(label11);
             Reportes.Controls.Add(label10);
@@ -431,104 +435,104 @@
             label22.TabIndex = 5;
             label22.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label21
+            // lblSalario3
             // 
-            label21.BackColor = SystemColors.ActiveCaption;
-            label21.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label21.ForeColor = SystemColors.ControlLightLight;
-            label21.Location = new Point(654, 278);
-            label21.Name = "label21";
-            label21.Size = new Size(224, 37);
-            label21.TabIndex = 17;
-            label21.TextAlign = ContentAlignment.MiddleCenter;
+            lblSalario3.BackColor = SystemColors.ActiveCaption;
+            lblSalario3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSalario3.ForeColor = SystemColors.ControlLightLight;
+            lblSalario3.Location = new Point(654, 278);
+            lblSalario3.Name = "lblSalario3";
+            lblSalario3.Size = new Size(224, 37);
+            lblSalario3.TabIndex = 17;
+            lblSalario3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label20
+            // lblSalario2
             // 
-            label20.BackColor = SystemColors.ActiveCaption;
-            label20.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label20.ForeColor = SystemColors.ControlLightLight;
-            label20.Location = new Point(652, 219);
-            label20.Name = "label20";
-            label20.Size = new Size(224, 37);
-            label20.TabIndex = 16;
-            label20.TextAlign = ContentAlignment.MiddleCenter;
+            lblSalario2.BackColor = SystemColors.ActiveCaption;
+            lblSalario2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSalario2.ForeColor = SystemColors.ControlLightLight;
+            lblSalario2.Location = new Point(652, 219);
+            lblSalario2.Name = "lblSalario2";
+            lblSalario2.Size = new Size(224, 37);
+            lblSalario2.TabIndex = 16;
+            lblSalario2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label19
+            // lblSalario1
             // 
-            label19.BackColor = SystemColors.ActiveCaption;
-            label19.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label19.ForeColor = SystemColors.ControlLightLight;
-            label19.Location = new Point(654, 162);
-            label19.Name = "label19";
-            label19.Size = new Size(224, 37);
-            label19.TabIndex = 15;
-            label19.TextAlign = ContentAlignment.MiddleCenter;
+            lblSalario1.BackColor = SystemColors.ActiveCaption;
+            lblSalario1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSalario1.ForeColor = SystemColors.ControlLightLight;
+            lblSalario1.Location = new Point(654, 162);
+            lblSalario1.Name = "lblSalario1";
+            lblSalario1.Size = new Size(224, 37);
+            lblSalario1.TabIndex = 15;
+            lblSalario1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label18
+            // lblTipoContrato3
             // 
-            label18.BackColor = SystemColors.ActiveCaption;
-            label18.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label18.ForeColor = SystemColors.ControlLightLight;
-            label18.Location = new Point(330, 278);
-            label18.Name = "label18";
-            label18.Size = new Size(318, 37);
-            label18.TabIndex = 14;
-            label18.TextAlign = ContentAlignment.MiddleCenter;
+            lblTipoContrato3.BackColor = SystemColors.ActiveCaption;
+            lblTipoContrato3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTipoContrato3.ForeColor = SystemColors.ControlLightLight;
+            lblTipoContrato3.Location = new Point(330, 278);
+            lblTipoContrato3.Name = "lblTipoContrato3";
+            lblTipoContrato3.Size = new Size(318, 37);
+            lblTipoContrato3.TabIndex = 14;
+            lblTipoContrato3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label17
+            // lblTipoContrato2
             // 
-            label17.BackColor = SystemColors.ActiveCaption;
-            label17.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label17.ForeColor = SystemColors.ControlLightLight;
-            label17.Location = new Point(330, 219);
-            label17.Name = "label17";
-            label17.Size = new Size(318, 37);
-            label17.TabIndex = 13;
-            label17.TextAlign = ContentAlignment.MiddleCenter;
+            lblTipoContrato2.BackColor = SystemColors.ActiveCaption;
+            lblTipoContrato2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTipoContrato2.ForeColor = SystemColors.ControlLightLight;
+            lblTipoContrato2.Location = new Point(330, 219);
+            lblTipoContrato2.Name = "lblTipoContrato2";
+            lblTipoContrato2.Size = new Size(318, 37);
+            lblTipoContrato2.TabIndex = 13;
+            lblTipoContrato2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label16
+            // lblTipoContrato1
             // 
-            label16.BackColor = SystemColors.ActiveCaption;
-            label16.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label16.ForeColor = SystemColors.ControlLightLight;
-            label16.Location = new Point(330, 162);
-            label16.Name = "label16";
-            label16.Size = new Size(318, 37);
-            label16.TabIndex = 12;
-            label16.TextAlign = ContentAlignment.MiddleCenter;
+            lblTipoContrato1.BackColor = SystemColors.ActiveCaption;
+            lblTipoContrato1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblTipoContrato1.ForeColor = SystemColors.ControlLightLight;
+            lblTipoContrato1.Location = new Point(330, 162);
+            lblTipoContrato1.Name = "lblTipoContrato1";
+            lblTipoContrato1.Size = new Size(318, 37);
+            lblTipoContrato1.TabIndex = 12;
+            lblTipoContrato1.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label15
+            // lblEmpleado2
             // 
-            label15.BackColor = SystemColors.ActiveCaption;
-            label15.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label15.ForeColor = SystemColors.ControlLightLight;
-            label15.Location = new Point(4, 219);
-            label15.Name = "label15";
-            label15.Size = new Size(320, 37);
-            label15.TabIndex = 11;
-            label15.TextAlign = ContentAlignment.MiddleCenter;
+            lblEmpleado2.BackColor = SystemColors.ActiveCaption;
+            lblEmpleado2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmpleado2.ForeColor = SystemColors.ControlLightLight;
+            lblEmpleado2.Location = new Point(4, 219);
+            lblEmpleado2.Name = "lblEmpleado2";
+            lblEmpleado2.Size = new Size(320, 37);
+            lblEmpleado2.TabIndex = 11;
+            lblEmpleado2.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label14
+            // lblEmpleado3
             // 
-            label14.BackColor = SystemColors.ActiveCaption;
-            label14.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label14.ForeColor = SystemColors.ControlLightLight;
-            label14.Location = new Point(4, 278);
-            label14.Name = "label14";
-            label14.Size = new Size(320, 37);
-            label14.TabIndex = 10;
-            label14.TextAlign = ContentAlignment.MiddleCenter;
+            lblEmpleado3.BackColor = SystemColors.ActiveCaption;
+            lblEmpleado3.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmpleado3.ForeColor = SystemColors.ControlLightLight;
+            lblEmpleado3.Location = new Point(4, 278);
+            lblEmpleado3.Name = "lblEmpleado3";
+            lblEmpleado3.Size = new Size(320, 37);
+            lblEmpleado3.TabIndex = 10;
+            lblEmpleado3.TextAlign = ContentAlignment.MiddleCenter;
             // 
-            // label13
+            // lblEmpleado1
             // 
-            label13.BackColor = SystemColors.ActiveCaption;
-            label13.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label13.ForeColor = SystemColors.ControlLightLight;
-            label13.Location = new Point(4, 162);
-            label13.Name = "label13";
-            label13.Size = new Size(320, 37);
-            label13.TabIndex = 9;
-            label13.TextAlign = ContentAlignment.MiddleCenter;
+            lblEmpleado1.BackColor = SystemColors.ActiveCaption;
+            lblEmpleado1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblEmpleado1.ForeColor = SystemColors.ControlLightLight;
+            lblEmpleado1.Location = new Point(4, 162);
+            lblEmpleado1.Name = "lblEmpleado1";
+            lblEmpleado1.Size = new Size(320, 37);
+            lblEmpleado1.TabIndex = 9;
+            lblEmpleado1.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // label12
             // 
@@ -616,6 +620,7 @@
             Empleados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)DTG).EndInit();
             Pago.ResumeLayout(false);
+            Pago.PerformLayout();
             Reportes.ResumeLayout(false);
             ResumeLayout(false);
         }
@@ -636,39 +641,39 @@
         private TabPage tabPage3;
         private Button btbExitEmpleados;
         private Button button1;
-        private Label lblEmpleado1;
-        private Label lblEmpleado;
-        private Label lblEmpleado3;
-        private ComboBox comboBox3;
-        private ComboBox comboBox2;
-        private ComboBox comboBox1;
+        private ComboBox cmb1;
         private Label label7;
         private Label label6;
-        private ComboBox comboBox4;
-        private Label lblEmpleado4;
         private Button btnOk;
         private Label label9;
         private Label label10;
-        private Label label13;
+        private Label lblEmpleado1;
         private Label label12;
         private Label label11;
-        private Label label21;
-        private Label label20;
-        private Label label19;
-        private Label label18;
-        private Label label17;
-        private Label label16;
-        private Label label15;
-        private Label label14;
+        private Label lblSalario3;
+        private Label lblSalario2;
+        private Label lblSalario1;
+        private Label lblTipoContrato3;
+        private Label lblTipoContrato2;
+        private Label lblTipoContrato1;
+        private Label lblEmpleado2;
+        private Label lblEmpleado3;
         private Label label22;
         private MonthCalendar monthCalendar1;
         private Button btnCalculadora;
         private Label label23;
-        private ComboBox comboBox5;
-        private Label lblEmpleado6;
-        private ComboBox comboBox6;
-        private Label lblEmpleado5;
         private Button button3;
         private Label label26;
+        private TextBox textBox6;
+        private TextBox textBox5;
+        private TextBox textBox4;
+        private TextBox textBox3;
+        private TextBox textBox2;
+        private TextBox textBox1;
+        private ComboBox cmb3;
+        private ComboBox cmb6;
+        private ComboBox cmb5;
+        private ComboBox cmb4;
+        private ComboBox cmb2;
     }
 }
