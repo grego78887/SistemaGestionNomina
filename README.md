@@ -68,6 +68,8 @@ dotnet publish SistemaGestionNomina/SistemaGestionNomina.csproj -c Release -r wi
 
 El ejecutable estará en la carpeta `output/`
 
+**Nota**: El ejecutable auto-contenido incluye el runtime de .NET completo, por lo que el tamaño será mayor (100+ MB). Si deseas un ejecutable más pequeño y sabes que .NET está instalado en el sistema destino, usa `--self-contained false`.
+
 ## 🛠️ Tecnologías Utilizadas
 
 - .NET (Windows Forms)
