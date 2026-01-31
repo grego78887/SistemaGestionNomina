@@ -1,3 +1,6 @@
+using System;
+using System.Windows.Forms;
+
 namespace SistemaGestionNomina
 {
     internal static class Program

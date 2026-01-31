@@ -12,19 +12,28 @@ namespace SistemaGestionNomina
 {
     public partial class frmCalculadoraEmpleados : Form
     {
-        public frmCalculadoraEmpleados(decimal[] salarioSemanal)
+        private readonly decimal[] _salarios;
+
+        // Added a parameterless constructor to allow designer/runtime to instantiate the form without null _salarios
+        public frmCalculadoraEmpleados()
         {
+            _salarios = Array.Empty<decimal>();
             InitializeComponent();
         }
 
-        public void frmCalculadoraEmpleados_Load(object sender, EventArgs e)
+        public frmCalculadoraEmpleados(decimal[] salarios)
+        {
+            _salarios = salarios ?? Array.Empty<decimal>();
+            InitializeComponent();
+        }
+
+        private void frmCalculadoraEmpleados_Load(object sender, EventArgs e)
         {
 
         }
-        //VARIABLES
+
         string operador = "";
-        private double nun1;
-        double num1 = 0;
+        private double num1;
         double num2 = 0;
 
         private void btnBorrar_Click(object sender, EventArgs e)
@@ -104,65 +113,73 @@ namespace SistemaGestionNomina
             else txtPantalla.Text += "0";
         }
 
-        private void btnEmpleadoHora_Click(object sender, EventArgs e)
-        {
-
-            if (txtPantalla.Text == "0") txtPantalla.Text = "Empleado por Horas";
-            else txtPantalla.Text += "0";
-        }
 
         private void button1_Click(object sender, EventArgs e)
         {
-
-            if (txtPantalla.Text == "0") txtPantalla.Text = ",";
-            else txtPantalla.Text += ",";
+            if (!txtPantalla.Text.Contains(","))
+            {
+                txtPantalla.Text += ",";
+            }
         }
 
         private void btnSuma_Click(object sender, EventArgs e)
         {
             operador = "+";
-            nun1 = Convert.ToDouble(txtPantalla.Text);
+            num1 = Convert.ToDouble(txtPantalla.Text);
+            // Reset input so user can enter the second operand
             txtPantalla.Text = "0";
-
-
         }
 
         private void btnMultiplicacion_Click(object sender, EventArgs e)
         {
             operador = "*";
-            nun1 = Convert.ToDouble(txtPantalla.Text);
+            num1 = Convert.ToDouble(txtPantalla.Text);
+            // Reset input so user can enter the second operand
             txtPantalla.Text = "0";
         }
 
         private void btnDivision_Click(object sender, EventArgs e)
         {
             operador = "/";
-            nun1 = Convert.ToDouble(txtPantalla.Text);
+            num1 = Convert.ToDouble(txtPantalla.Text);
+            // Reset input so user can enter the second operand
             txtPantalla.Text = "0";
         }
 
         private void btnConfirmar_Click(object sender, EventArgs e)
         {
-           
             num2 = Convert.ToDouble(txtPantalla.Text);
 
-            switch (operador) 
+            switch (operador)
             {
                 case "+":
-                    txtPantalla.Text = Convert.ToString(nun1 + num2);
+                    txtPantalla.Text = Convert.ToString(num1 + num2);
                     break;
                 case "*":
-                    txtPantalla.Text = Convert.ToString(nun1 * num2);
-                    break; 
-
-                case "/":
-                    txtPantalla.Text = Convert.ToString(nun1 / num2);
+                    txtPantalla.Text = Convert.ToString(num1 * num2);
                     break;
-
-                    default:
+                case "/":
+                    if (num2 != 0)
+                        txtPantalla.Text = Convert.ToString(num1 / num2);
+                    else
+                        txtPantalla.Text = "Error: División por cero";
+                    break;
+                default:
                     txtPantalla.Text = "Error: Operador no válido";
                     break;
-
             }
-        }    }
+        }
+
+        private void btnSumarPagos_Click(object sender, EventArgs e)
+        {
+            decimal total = 0;
+            foreach (var salario in _salarios)
+            {
+                total += salario;
+            }
+            txtPantalla.Text = total.ToString("F2");
+        }
+    }
+
+
 }

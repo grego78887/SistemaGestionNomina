@@ -82,7 +82,7 @@
             btnEmpleadoHora.TabIndex = 2;
             btnEmpleadoHora.Text = "Empleados por horas";
             btnEmpleadoHora.UseVisualStyleBackColor = false;
-            btnEmpleadoHora.Click += btnEmpleadoHora_Click;
+          
             // 
             // btnBorrar
             // 

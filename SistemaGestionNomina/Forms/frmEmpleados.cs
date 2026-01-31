@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace SistemaGestionNomina
+namespace SistemaGestionNomina.Forms
 {
-    internal class Calculadora : Form1
+    internal class frmEmpleados : Form1
     {
         public void CalcularIngresos()
         {

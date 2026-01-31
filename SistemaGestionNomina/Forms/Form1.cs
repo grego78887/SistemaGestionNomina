@@ -22,7 +22,7 @@ namespace SistemaGestionNomina
         private readonly int[] numeroSeguroSociaL = { 112233445, 554433221, 667788990, 998877665, 443322110, 110022334 };
         private readonly decimal[] ventasBrutas = { 200000m, 150000m, 250000m, 180000m, 220000m, 300000m };
         private readonly decimal[] tarifaComision = { 0.10m, 0.12m, 0.11m, 0.09m, 0.13m, 0.15m };
-        
+
 
         // Datos para empleados asalariados por comisión-------------------------------------------------------------------------------------------------------------------
         public readonly string[] empleadosSalarioComision = { "Ana Ruiz", "Carlos Vega", "Diana Flores", "Eduardo Ramos", "Fernanda Soto" };
@@ -74,8 +74,7 @@ namespace SistemaGestionNomina
         private void btnLimpiarEmpleados_Click(object sender, EventArgs e)
         {
             DTG.Rows.Clear();
-            DTG.Refresh();  
-
+            DTG.Refresh();
 
         }
 
@@ -98,20 +97,38 @@ namespace SistemaGestionNomina
             cmb1.Items.AddRange(empleados);
             cmb2.Items.Clear();
             cmb2.Items.AddRange(puestos);
-            cmb4.Items.Clear();
-            cmb4.Items.AddRange(salarioSemanal.Select(s => s.ToString()).ToArray());
+
+        }
+
+        private void btnSeleccionarEmpleados_Click(object sender, EventArgs e)
+        {
+            if (DTG.SelectedRows.Count > 0 && !DTG.SelectedRows[0].IsNewRow)
+            {
+                DataGridViewRow selectedRow = DTG.SelectedRows[0];
+                int index = selectedRow.Index;
+
+                cmb1.Text = empleados[index];
+                cmb2.Text = puestos[index];
+
+                tabControl1.SelectedTab = Pago;
+            }
+            else
+            {
+                MessageBox.Show("Por favor, seleccione un empleado válido.", "Selección de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
 
         private void btnOk_Click(object sender, EventArgs e)
         {
             MessageBox.Show("¡Operación realizada con éxito!", "Pagos", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-            
-            lblEmpleado1.Text = label6.Text;  
-            lblEmpleado3.Text = cmb4.Text;  
-            lblEmpleado2.Text = label7.Text;  
 
-           
+            lblEmpleado1.Text = cmb1.Text;
+            lblTipoContrato1.Text = cmb2.Text;
+            lblSalario1.Text = textBox1.Text;
+            lblSalario2.Text = textBox1.Text;
+
+
             tabControl1.SelectedTab = Reportes;
         }
 
@@ -120,29 +137,6 @@ namespace SistemaGestionNomina
             frmCalculadoraEmpleados calculadoraForm = new frmCalculadoraEmpleados(salarioSemanal);
             calculadoraForm.Show();
         }
-
-        private void btnSeleccionarEmpleados_Click(object sender, EventArgs e)
-        {
-            if (DTG.SelectedRows.Count > 0)
-            {
-                DataGridViewRow selectedRow = DTG.SelectedRows[0];
-                int index = selectedRow.Index;
-
-
-                label6.Text = empleados[index];
-                label7.Text = puestos[index];
-
-
-                cmb4.Text = salarioSemanal[index].ToString();
-
-                tabControl1.SelectedTab = Pago;
-            }
-            else
-            {
-                MessageBox.Show("Por favor, seleccione un empleado.", "Selección de Empleado", MessageBoxButtons.OK, MessageBoxIcon.Warning);
-            }
-        }
-
 
         private void lblEmpleado1_Click(object sender, EventArgs e)
         {
@@ -157,6 +151,10 @@ namespace SistemaGestionNomina
             }
         }
 
+        private void Form1_Load(object sender, EventArgs e)
+        {
+
+        }
 
 
     }

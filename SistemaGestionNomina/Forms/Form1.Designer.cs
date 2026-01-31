@@ -37,16 +37,8 @@
             btnBuscarEmpleados = new Button();
             DTG = new DataGridView();
             Pago = new TabPage();
-            cmb6 = new ComboBox();
-            cmb5 = new ComboBox();
-            cmb4 = new ComboBox();
+            label2 = new Label();
             cmb2 = new ComboBox();
-            cmb3 = new ComboBox();
-            textBox6 = new TextBox();
-            textBox5 = new TextBox();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            textBox2 = new TextBox();
             textBox1 = new TextBox();
             button3 = new Button();
             label23 = new Label();
@@ -108,6 +100,7 @@
             Empleados.TabIndex = 1;
             Empleados.Text = "Empleados";
             Empleados.UseVisualStyleBackColor = true;
+         
             // 
             // label3
             // 
@@ -171,16 +164,8 @@
             // 
             // Pago
             // 
-            Pago.Controls.Add(cmb6);
-            Pago.Controls.Add(cmb5);
-            Pago.Controls.Add(cmb4);
+            Pago.Controls.Add(label2);
             Pago.Controls.Add(cmb2);
-            Pago.Controls.Add(cmb3);
-            Pago.Controls.Add(textBox6);
-            Pago.Controls.Add(textBox5);
-            Pago.Controls.Add(textBox4);
-            Pago.Controls.Add(textBox3);
-            Pago.Controls.Add(textBox2);
             Pago.Controls.Add(textBox1);
             Pago.Controls.Add(button3);
             Pago.Controls.Add(label23);
@@ -198,109 +183,41 @@
             Pago.Text = "Pagos";
             Pago.UseVisualStyleBackColor = true;
             // 
-            // cmb6
+            // label2
             // 
-            cmb6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmb6.FormattingEnabled = true;
-            cmb6.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
-            cmb6.Location = new Point(335, 357);
-            cmb6.Name = "cmb6";
-            cmb6.Size = new Size(309, 33);
-            cmb6.TabIndex = 27;
-            // 
-            // cmb5
-            // 
-            cmb5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmb5.FormattingEnabled = true;
-            cmb5.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
-            cmb5.Location = new Point(335, 301);
-            cmb5.Name = "cmb5";
-            cmb5.Size = new Size(309, 33);
-            cmb5.TabIndex = 26;
-            // 
-            // cmb4
-            // 
-            cmb4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmb4.FormattingEnabled = true;
-            cmb4.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
-            cmb4.Location = new Point(335, 257);
-            cmb4.Name = "cmb4";
-            cmb4.Size = new Size(309, 33);
-            cmb4.TabIndex = 25;
+            label2.BackColor = SystemColors.ActiveCaption;
+            label2.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(335, 130);
+            label2.Name = "label2";
+            label2.Size = new Size(309, 57);
+            label2.TabIndex = 25;
+            label2.Text = "Contrato";
+            label2.TextAlign = ContentAlignment.MiddleCenter;
             // 
             // cmb2
             // 
             cmb2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmb2.FormattingEnabled = true;
             cmb2.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
-            cmb2.Location = new Point(335, 165);
+            cmb2.Location = new Point(335, 193);
             cmb2.Name = "cmb2";
             cmb2.Size = new Size(309, 33);
             cmb2.TabIndex = 24;
             // 
-            // cmb3
-            // 
-            cmb3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            cmb3.FormattingEnabled = true;
-            cmb3.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
-            cmb3.Location = new Point(335, 214);
-            cmb3.Name = "cmb3";
-            cmb3.Size = new Size(309, 33);
-            cmb3.TabIndex = 23;
-            // 
-            // textBox6
-            // 
-            textBox6.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox6.Location = new Point(656, 165);
-            textBox6.Name = "textBox6";
-            textBox6.Size = new Size(160, 33);
-            textBox6.TabIndex = 22;
-            // 
-            // textBox5
-            // 
-            textBox5.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox5.Location = new Point(656, 357);
-            textBox5.Name = "textBox5";
-            textBox5.Size = new Size(160, 33);
-            textBox5.TabIndex = 21;
-            // 
-            // textBox4
-            // 
-            textBox4.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox4.Location = new Point(656, 305);
-            textBox4.Name = "textBox4";
-            textBox4.Size = new Size(160, 33);
-            textBox4.TabIndex = 20;
-            // 
-            // textBox3
-            // 
-            textBox3.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox3.Location = new Point(661, 257);
-            textBox3.Name = "textBox3";
-            textBox3.Size = new Size(160, 33);
-            textBox3.TabIndex = 19;
-            // 
-            // textBox2
-            // 
-            textBox2.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox2.Location = new Point(656, 210);
-            textBox2.Name = "textBox2";
-            textBox2.Size = new Size(160, 33);
-            textBox2.TabIndex = 18;
-            // 
             // textBox1
             // 
             textBox1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            textBox1.Location = new Point(656, 111);
+            textBox1.Location = new Point(397, 315);
             textBox1.Name = "textBox1";
-            textBox1.Size = new Size(165, 33);
+            textBox1.Size = new Size(177, 33);
             textBox1.TabIndex = 17;
             // 
             // button3
             // 
             button3.BackgroundImage = Properties.Resources.Moneda;
             button3.BackgroundImageLayout = ImageLayout.Stretch;
-            button3.Location = new Point(839, 265);
+            button3.Location = new Point(752, 265);
             button3.Name = "button3";
             button3.Size = new Size(227, 109);
             button3.TabIndex = 16;
@@ -311,7 +228,7 @@
             label23.BackColor = SystemColors.ActiveCaption;
             label23.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label23.ForeColor = SystemColors.ControlLightLight;
-            label23.Location = new Point(907, 199);
+            label23.Location = new Point(820, 199);
             label23.Name = "label23";
             label23.Size = new Size(87, 60);
             label23.TabIndex = 5;
@@ -321,7 +238,7 @@
             // 
             btnCalculadora.BackgroundImage = Properties.Resources.estesi;
             btnCalculadora.BackgroundImageLayout = ImageLayout.Stretch;
-            btnCalculadora.Location = new Point(992, 199);
+            btnCalculadora.Location = new Point(905, 199);
             btnCalculadora.Name = "btnCalculadora";
             btnCalculadora.Size = new Size(74, 60);
             btnCalculadora.TabIndex = 11;
@@ -330,7 +247,7 @@
             // 
             // monthCalendar1
             // 
-            monthCalendar1.Location = new Point(839, 25);
+            monthCalendar1.Location = new Point(752, 25);
             monthCalendar1.Name = "monthCalendar1";
             monthCalendar1.TabIndex = 10;
             // 
@@ -338,7 +255,7 @@
             // 
             btnOk.BackgroundImage = (Image)resources.GetObject("btnOk.BackgroundImage");
             btnOk.BackgroundImageLayout = ImageLayout.Stretch;
-            btnOk.Location = new Point(839, 199);
+            btnOk.Location = new Point(752, 199);
             btnOk.Name = "btnOk";
             btnOk.Size = new Size(69, 60);
             btnOk.TabIndex = 5;
@@ -350,7 +267,7 @@
             label7.BackColor = SystemColors.ActiveCaption;
             label7.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label7.ForeColor = SystemColors.ControlLightLight;
-            label7.Location = new Point(661, 16);
+            label7.Location = new Point(397, 250);
             label7.Name = "label7";
             label7.Size = new Size(177, 57);
             label7.TabIndex = 7;
@@ -374,7 +291,7 @@
             cmb1.Font = new Font("Segoe UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             cmb1.FormattingEnabled = true;
             cmb1.Items.AddRange(new object[] { "\"Gregori Evangelista", "" });
-            cmb1.Location = new Point(335, 111);
+            cmb1.Location = new Point(335, 76);
             cmb1.Name = "cmb1";
             cmb1.Size = new Size(309, 33);
             cmb1.TabIndex = 4;
@@ -616,6 +533,7 @@
             Name = "Form1";
             StartPosition = FormStartPosition.CenterParent;
             Text = "Form1";
+            Load += Form1_Load;
             tabControl1.ResumeLayout(false);
             Empleados.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)DTG).EndInit();
@@ -664,16 +582,8 @@
         private Label label23;
         private Button button3;
         private Label label26;
-        private TextBox textBox6;
-        private TextBox textBox5;
-        private TextBox textBox4;
-        private TextBox textBox3;
-        private TextBox textBox2;
         private TextBox textBox1;
-        private ComboBox cmb3;
-        private ComboBox cmb6;
-        private ComboBox cmb5;
-        private ComboBox cmb4;
         private ComboBox cmb2;
+        private Label label2;
     }
 }
